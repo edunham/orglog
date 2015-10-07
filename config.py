@@ -1,3 +1,10 @@
 org = "rust-lang"
-clones_dir = "repos"
-destroy_clones = False
+
+# Path to where we'll dump the bare checkouts. Must end in /
+clones_dir = "repos/"
+
+# Path to the concatenated log
+log_path = "TheLog.txt"
+
+# Nuke the clones_dir afterwards?
+destroy_clones = True

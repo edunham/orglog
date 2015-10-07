@@ -1,6 +1,7 @@
 #! /usr/bin/python2
 
 import sys
+import os
 from github import Github
 try:
     from credentials import ghuser, ghpass
@@ -29,4 +30,15 @@ repos = {}
 for r in org.get_repos(type="sources"):
     repos[r.name] = r.ssh_url
 
-print repos
+# Clone all those repos
+#TODO: handle error if dir exists
+os.mkdir(config.clones_dir)
+
+#TODO: Some of these might already exist. Error handling?
+for name in repos:
+    where = config.clones_dir + name
+    os.system("git clone --bare " + repos[name] + " " + where)
+    os.system("git -C " + where + " log >> "+ config.log_path)
+
+if config.destroy_clones:
+    os.system("rm -rf " + config.clones_dir)
