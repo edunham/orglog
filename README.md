@@ -18,6 +18,16 @@ GitHub username and password of an account without 2-factor auth.
 
 Then run `python orglog.py orgname` and the log will be created. 
 
+## Gitstat
+
+The following goes into gitstat's `local_settings.py`:
+
+```
+TEMPLATE_FILE = 'aggregate_template.html'
+INPUT_FILE = 'log.txt' # None for stdin
+OUTPUT_FILE = 'index.html' # None for stdout
+```
+
 ## Contributing
 
 Look for `#TODO` in orglog.py. Pull requests welcome.

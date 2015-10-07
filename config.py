@@ -4,7 +4,7 @@ org = "rust-lang"
 clones_dir = "repos/"
 
 # Path to the concatenated log
-log_path = "TheLog.txt"
+log_path = "log.txt"
 
 # Nuke the clones_dir afterwards?
 destroy_clones = True
