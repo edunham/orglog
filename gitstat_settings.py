@@ -6,8 +6,8 @@ CHART_SIZE = 70 # Maybe Google limit?
 CHARSET = 'utf-8'
 
 TEMPLATE_FILE = 'aggregate_template.html'
-INPUT_FILE = 'log.txt' # None for stdin
-OUTPUT_FILE = 'index.html' # None for stdout
+INPUT_FILE = '../log.txt' # None for stdin
+OUTPUT_FILE = '../index.html' # None for stdout
 AUTHOR_FILE = 'authors.txt'
 
 COMMIT_DETAIL_COUNT = 1
