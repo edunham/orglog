@@ -131,7 +131,6 @@
             <li>{{ (group.authors|length * 100 / authors|length)|round(1) }}% of users</li>
             <li>{{ (group.commits|length * 100 / total.commits|length)|round(1) }}% of commits, impacts {{ group.commit_impact }} of {{ total.commit_impact }}</li>
           </ul>
-          <p>Members are: {% for author in group.authors %}<a href="#author-{{ author.tag }}">{{ author.names[0] }}</a> {% endfor %}</p>
           </section>
           {% endif %}
           {% endfor %}
