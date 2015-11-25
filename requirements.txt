@@ -1,0 +1,9 @@
+GitPython==1.0.1
+Jinja2==2.8
+MarkupSafe==0.23
+PyGithub==1.25.2
+argparse==1.2.1
+gitdb==0.6.4
+ranking==0.3.1
+smmap==0.9.0
+wsgiref==0.1.2
