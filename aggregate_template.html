@@ -166,16 +166,6 @@
             <dt>Other names:</dt>
               <dd>{% for name in author.names[1:] %}{{ name }} {% endfor %}</dd>
             {% endif %}
-            <dt>Groups:</dt>
-              <dd>{% for group in [actives, newfaces] + groups %}{% if author in group.authors %}<a href="#group-{{ group.groupname }}">{{ group.groupname }}</a> {% endif %}{% endfor %}</dd>
-            <dt>Commit Count:</dt>
-              <dd>{{ author.commits|length }} (#{{ author.rank }})</dd>
-            <dt>Commit Rate:</dt>
-              <dd>{{ (author.commits|length * 100 / total.commits|length) |round(1) }}%</dd>
-            <dt>Commit Impact:</dt>
-              <dd>{{ author.commit_impact }} of {{ total.commit_impact }} </dd>
-            <dt>Search on Github:</dt>
-              <dd><a href="https://github.com/search?q={{ author.names[0] }}&type=Users">{{ author.names[0] }} on Github</a> or <a href="https://github.com/search?q={{ author.email.split('@')[0] }}&type=Users">{{ author.email.split('@')[0] }} on Github</a></dd>
           </dl>
           </section>
        </section>
