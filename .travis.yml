@@ -13,6 +13,4 @@ script:
     - python gitstat/gen.py 
 
 after_success:
-    - git init; git config user.name "TravisCI"; git config user.email "travisdeploy@edunham.net"
-    - git add index.html; git commit -m "deploy"
-    - git push --force --quiet "https://${GH_TOKEN}@github.com/edunham/rust-org-stats" master:gh-pages > /dev/null 2>&1
+    - out/forcepush.sh
