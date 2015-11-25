@@ -32,7 +32,7 @@ org = g.get_organization(orgname)
 repos = {}
 
 for r in org.get_repos(type="sources"):
-    repos[r.name] = r.ssh_url
+    repos[r.name] = r.html_url
 
 # Clone all those repos
 #TODO: handle error if dir exists
