@@ -1,0 +1,15 @@
+---
+language: python
+python: "2.7"
+sudo: false
+
+install: 
+    - pip install -r requirements.txt
+    - git clone https://github.com/youknowone/gitstat.git
+    - cp gitstat_settings.py gitstat/settings.py
+script: 
+    - python orglog.py
+    - python gitstat/gen.py 
+    - git init; git config user.name "TravisCI"; git config user.email "travisdeploy@edunham.net"
+    - git add index.html; git commit -m "deploy"
+    - git push --force --quiet "https://${GH_TOKEN}@github.com/edunham/rust-org-stats" master:gh-pages > /dev/null 2>&1
