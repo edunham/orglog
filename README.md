@@ -16,6 +16,9 @@ contribution types.
 Copy `credentials.py.example` to `credentials.py`, and edit it to contain the
 GitHub username and password of an account without 2-factor auth. 
 
+Alternately, set the `GH_USER` and `GH_PASS` environment variables to contain
+the username and password of a GitHub account without 2-factor auth. 
+
 Then run `python orglog.py orgname` and the log will be created. 
 
 ## Gitstat

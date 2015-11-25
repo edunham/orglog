@@ -6,7 +6,11 @@ from github import Github
 try:
     from credentials import ghuser, ghpass
 except ImportError:
-    raise Exception("You must create credentials.py, defining ghuser and ghpass")
+    try:
+        ghuser = os.environ['GH_USER']
+        ghpass = os.environ['GH_PASS']
+    except:
+        raise Exception("You must create credentials.py, defining ghuser and ghpass")
 import config
 
 # Auth to the API.
