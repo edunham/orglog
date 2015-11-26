@@ -108,6 +108,8 @@
       <div style="width:400px;">
         <section id="summary">{{ TOP }}<h1>Summary</h1>
         <ul>
+          <li>These stats were gathered from the commit histories of every 
+              non-fork repo in the rust-lang github organization</li>
           <li>Statistics from {{ total.commits[-1].date.short }} to {{ total.commits[0].date.short }}</li>
           <li>{{ numformat(authors|length) }} contributors</li>
           <li>{{ numformat(total.commits|length) }} commits</li>
