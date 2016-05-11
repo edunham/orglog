@@ -21,6 +21,7 @@ g = Github(ghuser, ghpass)
 # Get the org
 if len(sys.argv) < 2:
     orgname = config.org
+    print "read org name from config"
 else:
     orgname = sys.argv[1]
 
