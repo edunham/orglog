@@ -31,8 +31,11 @@ org = g.get_organization(orgname)
 
 repos = {}
 
+ignores = config.ignore_repos if config.ignore_repos else []
+
 for r in org.get_repos(type="sources"):
-    repos[r.name] = r.html_url
+    if r.name not in ignores:
+        repos[r.name] = r.html_url
 
 # Clone all those repos
 #TODO: handle error if dir exists

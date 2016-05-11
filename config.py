@@ -1,4 +1,6 @@
-org = "rust-lang"
+org = "servo"
+
+ignore_repos = ["skia", "skia-snapshots"]
 
 # Path to where we'll dump the bare checkouts. Must end in /
 clones_dir = "repos/"
