@@ -1,6 +1,6 @@
 org = "servo"
 
-ignore_repos = ["skia", "skia-snapshots"]
+ignore_repos = ["skia", "skia-snapshots", "cairo"]
 
 # Path to where we'll dump the bare checkouts. Must end in /
 clones_dir = "repos/"
