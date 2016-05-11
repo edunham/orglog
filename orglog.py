@@ -33,6 +33,11 @@ org = g.get_organization(orgname)
 repos = {}
 
 ignores = config.ignore_repos if config.ignore_repos else []
+forks = config.count_forks if config.count_forks else []
+
+for r in org.get_repos(type="forks"):
+    if r.name in forks:
+        repos[r.name] = r.html_url
 
 for r in org.get_repos(type="sources"):
     if r.name not in ignores:
