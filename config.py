@@ -1,5 +1,7 @@
 org = "servo"
 
+count_forks = False
+
 ignore_repos = ["skia", "skia-snapshots", "cairo"]
 
 # Path to where we'll dump the bare checkouts. Must end in /
