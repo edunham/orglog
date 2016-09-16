@@ -1,4 +1,4 @@
-# orglog
+# orglog [![Build Status](https://travis-ci.org/edunham/orglog.svg?branch=master)](https://travis-ci.org/edunham/orglog)
 
 The Rust and Servo projects enjoy giving credit to those who contribute to
 their GitHub repos, and congratulating new contributors when they land their
