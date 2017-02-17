@@ -3,14 +3,14 @@ language: python
 python: "2.7"
 sudo: false
 
-install: 
+install:
     - pip install -r requirements.txt
-    - git clone https://github.com/youknowone/gitstat.git
+    - git clone https://github.com/edunham/gitstat.git
     - cp gitstat_settings.py gitstat/settings.py
     - cp aggregate_template.html gitstat/aggregate_template.html
-script: 
+script:
     - python orglog.py
-    - python gitstat/gen.py 
+    - python gitstat/gen.py
 
 after_success:
     - out/forcepush.sh
